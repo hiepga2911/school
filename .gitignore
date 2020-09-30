@@ -23,4 +23,4 @@
 !/update
 !/update/.htaccess
 !/README.md
-
+!/var/lexim/**
