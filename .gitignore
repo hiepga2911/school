@@ -10,7 +10,6 @@
 !/app/*/
 !/app/code/**
 !/app/design/**
-!/app/etc/config.php
 !/app/i18n/**
 !/auth.json
 !/build_options.ini
@@ -21,6 +20,6 @@
 !/m2-hotfixes/**
 !/php.ini
 !/update
-!/update/.htaccess
 !/README.md
-!/var/lexim/**
+/update/.htaccess
+/app/etc/config.php

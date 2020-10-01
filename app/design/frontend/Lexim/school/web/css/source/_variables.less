@@ -1,0 +1,153 @@
+// /**
+//  * Copyright © Magento, Inc. All rights reserved.
+//  * See COPYING.txt for license details.
+//  */
+
+//
+//  School theme variables
+//  _____________________________________________
+
+// Layout
+/*
+@screen__xxs: 320px;
+@screen__xs: 480px;
+@screen__s: 640px;
+@screen__m: 768px;
+@screen__l: 1024px;
+@screen__l_1200: 1200px;
+@screen__xl: 1440px;
+@screen__xl_1760: 1760px;
+ */
+
+@screen__l_1200: 1200px;
+@screen__xl_1760: 1760px;
+
+//
+//  Typography
+//  ---------------------------------------------
+
+//  Fonts
+@font-family-name__base: 'Open Sans';
+@font-family__base: @font-family-name__base, @font-family__sans-serif;
+
+//  Colors nesting
+@page__background-color: @color-white;
+
+//
+//  Icons
+//  ---------------------------------------------
+
+@icon-success: '\e60e';
+@icon-error: '\e61f';
+@icon-edit: '\e601';
+@icon-print: '\e624';
+@icon-star-empty: '\e625';
+@icon-download: '\e626';
+@icon-private: '\e629';
+@icon-present: '\e62a';
+@icon-gift-registry: '\e62b';
+
+@icon-calendar__font-size: 23px;
+
+//
+//  Sidebar
+//  ---------------------------------------------
+
+@sidebar__background-color: @color-white-smoke; // Used in cart sidebar, Checkout sidebar, Tier Prices, My account navigation, Rating block background
+
+//
+//  Sidebar blocks
+//  ---------------------------------------------
+
+@block-items__counter__color: @color-gray43;
+
+
+
+//
+//  Functions
+//  ---------------------------------------------
+.display-flex() {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+}
+
+.display-flex-important() {
+  display: -webkit-flex !important;
+  display: -moz-flex !important;
+  display: -ms-flex !important;
+  display: -o-flex !important;
+  display: flex !important;
+}
+
+.flex-wrap(@flex_wrap) {
+  -webkit-flex-wrap: @flex_wrap;
+  -ms-flex-wrap: @flex_wrap;
+  flex-wrap: @flex_wrap;
+}
+
+.flex-direction(@flex_direction) {
+  -webkit-flex-direction: @flex_direction;
+  -ms-flex-direction: @flex_direction;
+  flex-direction: @flex_direction;
+}
+
+.justify-content(@justify_content) {
+  -webkit-justify-content: @justify_content;
+  justify-content: @justify_content;
+}
+
+.align-items(@align_item) {
+  -webkit-align-items: @align_item;
+  align-items: @align_item;
+}
+
+.box-sizing(@box_sizing) {
+  -webkit-box-sizing: @box_sizing;
+  -moz-box-sizing: @box_sizing;
+  box-sizing: @box_sizing;
+}
+
+.box-shadow(@box-shadow) {
+  -webkit-box-shadow: @box-shadow;
+  -moz-box-shadow: @box-shadow;
+  -o-box-shadow: @box-shadow;
+  box-shadow: @box-shadow;
+}
+
+.flex(@flex_content) {
+  -ms-flex: @flex_content;
+  -webkit-flex: @flex_content;
+  flex: @flex_content;
+}
+
+.flex-basis(@flex_content) {
+  -webkit-flex-basis: @flex_content;
+  flex-basis: @flex_content;
+}
+
+.flex-grow(@flex-grow) {
+  -webkit-flex-grow: @flex-grow;
+  flex-grow: @flex-grow;
+}
+
+.flex-shrink(@flex-shrink) {
+  -webkit-flex-shrink: @flex-shrink;
+  flex-shrink: @flex-shrink;
+}
+
+.transform(@value) {
+  -moz-transform: @value;
+  -webkit-transform: @value;
+  -ms-transform: @value;
+  -o-transform: @value;
+  transform: @value;
+}
+
+.border-radius(@border-value) {
+  -webkit-border-radius: @border-value;
+  -moz-border-radius: @border-value;
+  border-radius: @border-value;
+}
