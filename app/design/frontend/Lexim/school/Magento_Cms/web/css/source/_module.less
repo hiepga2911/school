@@ -4,35 +4,236 @@
 & when (@media-common = true) {
   .cms-home {
     .home-section {
+      position: relative;
+    }
 
+    .home_inner {
+      width: 100%;
+      max-width: @layout__max-width;
+      margin: 0 auto;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+
+    ._button {
+      border: 1px solid @green;
+      text-decoration: none;
+      padding: 0 10px;
+      display: inline-block;
+      text-align: center;
+      .border-radius(10px);
+      width: 170px;
+      height: 50px;
+      line-height: 50px;
+      font-size: 15px;
+    }
+
+    // s0
+    .top-banner {
+      position: relative;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      height: 500px;
+      .display-flex();
+      .align-items(center);
+      .justify-content(center);
+    }
+
+    .banner-text {
+      text-align: center;
+      color: #fff;
+
+      h1 {
+        margin: 0 0 20px;
+        font-weight: 900;
+        text-transform: uppercase;
+      }
+
+      h2 {
+        margin: 0;
+        font-weight: bold;
+      }
+    }
+
+    .banner-bottom {
+      position: absolute;
+      bottom: 0;
+      .display-flex();
+
+      > a {
+        .flex(1);
+        .display-flex();
+        .align-items(center);
+        .justify-content(center);
+        text-align: center;
+        padding: 10px 12px;
+        margin: 0 2px;
+        background: rgba(50, 157, 35, 0.88);
+        color: #fff;
+        font-weight: 600;
+
+        &:first-child {
+          .border-radius(46% 0 0 0);
+        }
+
+        &:last-child {
+          .border-radius(0 46% 0 0);
+        }
+      }
+    }
+
+    // s1
+    .s1-list {
+      .display-flex();
+      .justify-content(center);
+      max-width: 500px;
+      margin: 0 auto;
+
+      ._item {
+        .flex(1);
+        .display-flex();
+        .align-items(center);
+        .justify-content(center);
+        .flex-direction(column);
+        height: 100%;
+
+        &:not(:last-child) {
+          border-right: 1px dashed #bbb;
+        }
+      }
+
+      .svg {
+        width: 40px;
+        height: 40px;
+      }
+
+      h3 {
+        margin: 0;
+        font-size: 10px;
+        font-weight: 500;
+        text-align: center;
+
+        span {
+          color: @green;
+        }
+      }
+    }
+
+    // s2
+    .home-section.s2 {
+      background: #f5f5f5;
+
+      .home_inner {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        .display-flex();
+        .flex-wrap(wrap);
+        .justify-content(space-around);
+      }
+    }
+
+    .s2-item {
+      .flex(0 40%);
+      margin: 20px 0;
+
+      ._img {
+        margin: 0 0 10px;
+      }
+
+      h3 {
+        color: @green;
+        font-weight: 500;
+        line-height: 1.5;
+        margin: 0 0 10px;
+      }
+
+      p {
+        line-height: 1.5;
+        margin: 0 0 15px;
+      }
     }
   }
 }
 
 // max 768px
 .media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+  .cms-home {
+    .s1-list ._item.box .svg {
+      padding: 3px;
+    }
 
+  }
 }
 
 // max 480px
 .media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__xs) {
+  .cms-home {
+    .home_inner {
+    }
+
+    .s2-item {
+      .flex(0 100%);
+    }
+  }
 
 }
 
 // min 768px
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+  .cms-home {
+    .home_inner {
+      padding-left: 30px;
+      padding-right: 30px;
+    }
 
+
+  }
 }
 
 
 // min 1024px
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__l) {
+  .cms-home {
+    ._button {
+      width: 220px;
+      height: 60px;
+      font-size: 20px;
+      line-height: 60px;
+    }
+  }
+}
 
+// min 1200px
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__l_1200) {
+  .cms-home {
+    .home_inner {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    .home-section.s2 .home_inner {
+      .justify-content(space-between);
+    }
+
+    .s2-item {
+      .flex(0 43%);
+    }
+  }
 }
 
 // min 1440px
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__xl) {
+  .cms-home {
+    ._button {
+      width: 260px;
+      height: 70px;
+      font-size: 24px;
+      line-height: 70px;
+    }
 
+
+  }
 }
 
 //////////////////////////////////

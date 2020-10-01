@@ -68,6 +68,19 @@
         color: @blackText;
         font-size: 14px;
         line-height: 1.4;
+        font-weight: normal;
+
+        * {
+            .box-sizing(border-box);
+        }
+    }
+
+    a {
+        color: @blackText;
+
+        a:hover, a:visited {
+            color: @green
+        }
     }
 
     .page-wrapper {
@@ -95,7 +108,6 @@
     .page-header {
         .lib-css(background-color, @header__background-color);
         border-bottom: 1px solid @border-color__base;
-        margin-bottom: @indent__base;
 
         .panel.wrapper {
             .lib-css(background-color, @header-panel__background-color);
